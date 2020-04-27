@@ -40,7 +40,7 @@ namespace ServiceA.Controllers
             var request = new RestRequest("Payments");
             var response = client.Post(request);
 
-            return Ok(response.ErrorException);
+            return Ok(response.Content);
         }
     }
 }

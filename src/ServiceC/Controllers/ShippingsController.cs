@@ -33,8 +33,13 @@ namespace ServiceC.Controllers
         public IActionResult Post()
         {
             _logger.LogInformation("Service C: Kargo gönderildi.");
-
             return Ok("Kargolandı");
+        }
+
+        [HttpPost("error")]
+        public IActionResult Error()
+        {
+            throw new Exception("Kargo Gönderilemedi!");
         }
     }
 }
